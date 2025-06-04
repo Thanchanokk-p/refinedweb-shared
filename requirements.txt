@@ -1,0 +1,22 @@
+# Core Libraries
+pyspark==4.0.0       # Distributed processing engine
+pandas==2.2.3        # Data analysis & manipulation
+duckdb==1.3.0        # In-process SQL OLAP database
+jupyter              # Jupyter Notebook interface
+
+# AWS & Networking
+boto3                # AWS SDK for Python (S3, etc.)
+botocore             # Core library for AWS SDK
+requests             # HTTP requests library
+urllib3<2            # Required by botocore (version-limited)
+ujson                # Ultra-fast JSON parsing
+
+# Web & HTML Parsing
+beautifulsoup4       # HTML parsing (used in text extraction)
+lxml                 # Fast XML and HTML parser
+idna                 # Internationalized domain name support
+
+# Web Archive Parsing Uncomment if needed - at first used word_count pyspark to analyze
+# pydoop              # HDFS support (requires JAVA_HOME and HADOOP_HOME)
+# fastwarc==0.14.1    # Fast parsing of WARC/WAT/WET files
+# Resiliparse==0.14.1 # HTML parsing & text extraction (works well with fastwarc)
