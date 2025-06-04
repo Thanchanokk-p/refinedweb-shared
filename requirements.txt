@@ -1,22 +1,49 @@
-# Core Libraries
-pyspark==4.0.0       # Distributed processing engine
-pandas==2.2.3        # Data analysis & manipulation
-duckdb==1.3.0        # In-process SQL OLAP database
-jupyter              # Jupyter Notebook interface
+📌 สุดท้าย: ตัวอย่าง requirements.txt (อัปเดต)
+txt
+Copy
+Edit
+# Core
+numpy
+pandas==2.2.3
+matplotlib
+seaborn
+psutil
+python-dateutil
+datetime
+re
+tldextract
+
+# NLP
+nltk
+vaderSentiment
+
+# Spark
+pyspark==4.0.0
 
 # AWS & Networking
-boto3                # AWS SDK for Python (S3, etc.)
-botocore             # Core library for AWS SDK
-requests             # HTTP requests library
-urllib3<2            # Required by botocore (version-limited)
-ujson                # Ultra-fast JSON parsing
+boto3
+botocore
+requests
+urllib3<2
+ujson
 
-# Web & HTML Parsing
-beautifulsoup4       # HTML parsing (used in text extraction)
-lxml                 # Fast XML and HTML parser
-idna                 # Internationalized domain name support
+# Web Parsing
+beautifulsoup4
+lxml
+idna
 
-# Web Archive Parsing Uncomment if needed - at first used word_count pyspark to analyze
-# pydoop              # HDFS support (requires JAVA_HOME and HADOOP_HOME)
-# fastwarc==0.14.1    # Fast parsing of WARC/WAT/WET files
-# Resiliparse==0.14.1 # HTML parsing & text extraction (works well with fastwarc)
+# Optional: Web Archive Parsing (uncomment if needed) - at first used word_count pyspark to analyze
+# pydoop
+# fastwarc==0.14.1
+# Resiliparse==0.14.1
+
+# Additional packages (from pip install lines)
+datasets
+wordcloud
+vaderSentiment
+tldextract
+
+
+
+
+
