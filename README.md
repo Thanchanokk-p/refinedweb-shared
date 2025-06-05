@@ -50,7 +50,7 @@ refinedweb-shared/
 ├── requirements.txt # Python dependencies
 └── README.md # Project documentation and instructions
 
----
+```
 
 ## ⚙️ Technical Notes
 
@@ -90,7 +90,7 @@ notebooks/1_refinedweb-analysis.ipynb
 ### 🗃️ Data Folders
 
 These directories are part of the project structure, but their contents (e.g., `.csv`, `.parquet`) are excluded from version control via `.gitignore`. You will find `.gitkeep` files to preserve their presence in the repository:
-
+```bash
 data/
 ├── csv_data/ # Stores intermediate CSVs
 ├── filtered_data/ # Output from Spark/DuckDB filtering
@@ -99,7 +99,7 @@ data/
 
 Make sure your preprocessing or download scripts populate these folders as needed.
 
----
+```
 
 ### ⚙️ Optional: Setup Docker
 
