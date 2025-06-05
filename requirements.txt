@@ -1,7 +1,3 @@
-📌 สุดท้าย: ตัวอย่าง requirements.txt (อัปเดต)
-txt
-Copy
-Edit
 # Core
 numpy
 pandas==2.2.3
@@ -9,13 +5,14 @@ matplotlib
 seaborn
 psutil
 python-dateutil
-datetime
-re
 tldextract
 
 # NLP
 nltk
 vaderSentiment
+spacy
+keybert
+sentence-transformers
 
 # Spark
 pyspark==4.0.0
@@ -32,18 +29,11 @@ beautifulsoup4
 lxml
 idna
 
-# Optional: Web Archive Parsing (uncomment if needed) - at first used word_count pyspark to analyze
+# Optional: Web Archive Parsing (uncomment if needed)
 # pydoop
 # fastwarc==0.14.1
 # Resiliparse==0.14.1
 
-# Additional packages (from pip install lines)
+# Additional
 datasets
 wordcloud
-vaderSentiment
-tldextract
-
-
-
-
-

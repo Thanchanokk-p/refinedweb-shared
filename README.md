@@ -30,26 +30,24 @@ The goal of this project is to improve the visibility and relevance of AI-powere
 
 ## ⚙️ Technical Notes
 
-- The current setup uses limited compute resources; development runs at small scale.
-- **Apache Spark (PySpark)** is used in early-stage processing for scalability and parallelism.
-- AI8 servers are available for future scale-up or distributed execution.
-- Cloud-native extensions may be added in the future for large model training.
+- Development currently runs on limited compute resources for prototyping.
+- **Apache Spark (PySpark)** is used for scalable preprocessing of large datasets.
+- AI8 servers are supported for scaled or distributed computation.
+- Cloud-native components and large-model training extensions may be added later.
+- A **Dockerfile** is provided for reproducible environments.
+- An optional `get-docker.sh` script is available for installing Docker on compatible systems.
 
 ---
 
-## 📁 Project Structure
+## 🚀 Getting Started
 
-```text
-refinedweb-shared/
-├── notebooks/                    
-│   ├── 1_refinedweb-analysis.ipynb         # Spark-based data download + preprocessing
-│   └── 2_refinedweb-analysis_nlp.ipynb     # NLP modeling without Spark
-├── scripts/                     # Python/DuckDB scripts for filtering
-├── data/
-│   ├── parquet_data/            # Raw downloaded data
-│   └── filtered_data/           # Cleaned output
-├── download_parquet.sh          # Script to pull data from HuggingFace
-├── paths.txt                    # List of HuggingFace dataset URLs
-├── requirements.txt             # Python dependencies
-├── Dockerfile                   # Docker setup
-└── README.md                    # Project overview
+### 📦 Option 1: Run via Docker (Recommended)
+
+If Docker is already installed:
+
+```bash
+# Build the Docker image
+docker build -t refinedweb-env .
+
+# Run the container and expose Jupyter on port 8888
+docker run -it -p 8888:8888 refinedweb-env

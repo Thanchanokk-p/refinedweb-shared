@@ -1,4 +1,7 @@
 import duckdb
+import os
+
+os.makedirs('/app/filtered_data', exist_ok=True)
 
 con = duckdb.connect()
 con.execute(r'''
