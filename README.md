@@ -1,7 +1,7 @@
 # 🔍 RefinedWeb Analysis
 
 This project explores the potential of enhancing LLM (Large Language Model) performance on **RefinedWeb** — a brand-specific, curated web dataset tailored for retail and enterprise-focused use cases.
-There are multiple notebooks follow ตามเลขของ notebook, the project separategin notebook to handle xxxx and separate as each tasks
+
 ---
 
 ## 📚 What is RefinedWeb?
@@ -27,8 +27,8 @@ The goal of this project is to improve the visibility and relevance of AI-powere
   - Campaign strategy optimization
 
 ---
-```
 ## 🗂️ Project Structure
+```bash
 refinedweb-shared/
 ├── data/ # Input/output data folders (excluded from Git)
 │ ├── csv_data/ # Stores intermediate CSVs (e.g., transformed features)
@@ -37,6 +37,8 @@ refinedweb-shared/
 │ └── paths.txt # List of remote .parquet file URLs
 │
 ├── notebooks/ # Jupyter Notebooks for preprocessing and modeling
+│ ├── 1_refinedweb-analysis.ipynb # Spark-based preprocessing & EDA
+│ └── 2_refinedweb_analysis_nlp.ipynb # BERT-based NLP modeling and keyword analysis
 │
 ├── scripts/ # Python scripts for filtering, Spark/duckdb logic
 │ ├── filter_*.py # Brand-specific filter scripts
@@ -47,7 +49,7 @@ refinedweb-shared/
 ├── download_parquet.sh # Shell script to download parquet files listed in paths.txt
 ├── requirements.txt # Python dependencies
 └── README.md # Project documentation and instructions
-```
+
 ---
 
 ## ⚙️ Technical Notes
@@ -81,7 +83,7 @@ You should see the Jupyter Notebook interface. The first notebook to open is:
 notebooks/1_refinedweb-analysis.ipynb
 
 
- You can edit the `CMD` in the `Dockerfile` if you want to launch a different notebook by default.
+ℹ️ You can edit the `CMD` in the `Dockerfile` if you want to launch a different notebook by default.
 
 ---
 
@@ -105,4 +107,4 @@ If Docker is not installed yet, you may use the helper script:
 
 ```bash
 bash get-docker.sh
-
+---
