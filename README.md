@@ -126,12 +126,6 @@ docker run -it -p 8888:8888 refinedweb-env
 
 Navigate to http://localhost:8888 to open the notebook interface.
 
-## Run the container and expose Jupyter on port 8888
-docker run -it -p 8888:8888 refinedweb-env
-
-Once running, open your browser and go to:  
-[http://localhost:8888](http://localhost:8888)
-
 You should see the Jupyter Notebook interface. The first notebook to open is:
 notebooks/1_refinedweb-analysis.ipynb
 
