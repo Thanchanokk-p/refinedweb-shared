@@ -16,7 +16,7 @@ RefinedWeb is a cleaned, filtered, and deduplicated web crawl dataset optimized 
 
 ## 🎯 Project Objectives
 
-The main objective is to boost visibility and relevance for AI-powered search and insight tools by fine-tuning models on focused web content. This supports:
+The main objective is to boost the visibility and relevance of AI-powered response and insight tools by fine-tuning models on focused web content. This analysis of the pretrained RefinedWeb dataset supports:
 
 - Improved brand visibility  
 - Enhanced internal tools (e.g., search assistants, chatbots)  
