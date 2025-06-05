@@ -27,6 +27,29 @@ The goal of this project is to improve the visibility and relevance of AI-powere
   - Campaign strategy optimization
 
 ---
+## 🗂️ Project Structure
+refinedweb-shared/
+├── data/ # Input/output data folders (excluded from Git)
+│ ├── csv_data/ # Stores intermediate CSVs (e.g., transformed features)
+│ ├── filtered_data/ # Cleaned output after filtering or deduplication
+│ └── parquet_data/ # Raw downloaded files from HuggingFace (referenced in paths.txt)
+│ └── paths.txt # List of remote .parquet file URLs
+│
+├── notebooks/ # Jupyter Notebooks for preprocessing and modeling
+│ ├── 1_refinedweb-analysis.ipynb # Spark-based preprocessing & EDA
+│ └── 2_refinedweb_analysis_nlp.ipynb # BERT-based NLP modeling and keyword analysis
+│
+├── scripts/ # Python scripts for filtering, Spark/duckdb logic
+│ ├── filter_*.py # Brand-specific filter scripts
+│ └── sparkcc.py # Spark job for counting or transforming content
+│
+├── Dockerfile # Docker setup for reproducible environment
+├── get-docker.sh # Helper script to install Docker (optional)
+├── download_parquet.sh # Shell script to download parquet files listed in paths.txt
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation and instructions
+
+---
 
 ## ⚙️ Technical Notes
 
@@ -41,7 +64,7 @@ The goal of this project is to improve the visibility and relevance of AI-powere
 
 ## 🚀 Getting Started
 
-### 📦 Option 1: Run via Docker (Recommended)
+### 📦 Run via Docker 
 
 If Docker is already installed:
 
@@ -51,3 +74,36 @@ docker build -t refinedweb-env .
 
 # Run the container and expose Jupyter on port 8888
 docker run -it -p 8888:8888 refinedweb-env
+
+Once running, open your browser and go to:  
+[http://localhost:8888](http://localhost:8888)
+
+You should see the Jupyter Notebook interface. The first notebook to open is:
+notebooks/1_refinedweb-analysis.ipynb
+
+
+ℹ️ You can edit the `CMD` in the `Dockerfile` if you want to launch a different notebook by default.
+
+---
+
+### 🗃️ Data Folders
+
+These directories are part of the project structure, but their contents (e.g., `.csv`, `.parquet`) are excluded from version control via `.gitignore`. You will find `.gitkeep` files to preserve their presence in the repository:
+
+data/
+├── csv_data/ # Stores intermediate CSVs
+├── filtered_data/ # Output from Spark/DuckDB filtering
+├── parquet_data/ # Raw files downloaded from HuggingFace
+
+
+Make sure your preprocessing or download scripts populate these folders as needed.
+
+---
+
+### ⚙️ Optional: Setup Docker
+
+If Docker is not installed yet, you may use the helper script:
+
+```bash
+bash get-docker.sh
+
