@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  notebook:
+    build:
+      context: .
+      dockerfile: Dockerfile   
+    image: refinedweb-analysis-image 
+    container_name: refinedweb-analysis 
+    ports:
+      - "8888:8888" 
+    volumes:
+      - .:/app      
+    environment:
+      - PYSPARK_PYTHON=python3
+      - PYSPARK_DRIVER_PYTHON=python3
+    restart: unless-stopped
